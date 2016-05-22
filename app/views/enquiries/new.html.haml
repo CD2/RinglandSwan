@@ -1,0 +1,42 @@
+- content_for :full_width do
+  #banner_wrapper
+    = page_banner @page
+
+.page_columns
+  .main_column
+    %h1 Contact Us
+
+    %iframe{:allowfullscreen => "", :frameborder => "0", :height => "450", :src => "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d38702.785939379675!2d1.164788!3d52.679408!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xe7aa13dc58c5c5fe!2sSwan+Inn!5e0!3m2!1sen!2suk!4v1463873452306", :style => "border:0", :width => "100%"}
+
+  .side_column
+    %p
+      Swan Inn
+      %br
+      The Street
+      %br
+      Ringland
+      %br
+      Norwich
+      %br
+      NR8 6AB
+
+      %p
+        01603 869014
+
+      %p
+        info@ringlandswan.co.uk
+    = form_for @enquiry do |f|
+      - if @enquiry.errors.any?
+        #error_explanation
+          %h2= "#{pluralize(@enquiry.errors.count, "error")} prohibited this enquiry from being saved:"
+          %ul
+            - @enquiry.errors.full_messages.each do |msg|
+              %li= msg
+      .field
+        = f.text_field :name, placeholder: 'Name'
+      .field
+        = f.text_field :email, placeholder: 'Email'
+      .field
+        = f.text_area :message, placeholder: 'Message'
+      .actions
+        = f.submit 'Save'

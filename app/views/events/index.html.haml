@@ -1,0 +1,11 @@
+- content_for :full_width do
+  #banner_wrapper
+    = page_banner @page
+.page_columns
+  .main_column
+    = raw @page.body
+  .side_column
+    - @events.each do |event|
+      .event
+        %h2= event.name
+        %p= raw event.body

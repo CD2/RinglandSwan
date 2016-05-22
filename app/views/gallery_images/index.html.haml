@@ -1,0 +1,10 @@
+- content_for :full_width do
+  = page_banner @page
+
+.central_column
+  = raw @page.body
+
+.gallery_thumbs
+  - GalleryImage.all.each do |image|
+    .gallery_thumb
+      = image_tag image.image.gallery_thumbnail

@@ -1,0 +1,34 @@
+- content_for :full_width do
+  #banner_wrapper
+    = page_banner @page
+.page_columns
+  .main_column
+    = raw @page.body
+  .side_column
+    - if @page.gallery?
+      .gallery_thumbs.small_gallery
+        - GalleryImage.first(8).each do |image|
+          .gallery_thumb
+            = image_tag image.image.gallery_thumbnail
+    - else
+      %h3 View our menus
+      %p
+        = link_to 'RESTAURANT MENU'
+        %br
+        = link_to 'SUNDAY MENU'
+        %br
+        = link_to 'BAR MENU'
+        %br
+        = link_to 'BUFFETS'
+        %br
+        = link_to 'WINE LIST'
+        %br
+        = link_to 'BEER LIST'
+
+      %h3 Booking
+      %p
+        If you want to book a table, you can call us on 01603 869 014, email us at
+        = mail_to 'info@ringlandswan.co.uk'
+        or use our booking form by clicking the link below
+      %p
+        = link_to 'Book online', '#'

@@ -1,0 +1,54 @@
+#footer
+  #footer_inner
+    .column
+      %h4 Contact
+      %p
+        Swan Inn
+        %br
+        The Street
+        %br
+        Ringland
+        %br
+        Norwich
+        %br
+        NR8 6AB
+    .column
+      %h4 Opening Hours
+      %p
+        Monday - Friday
+        %br
+        12.00pm - 10.00pm
+      %p
+        Saturday
+        %br
+        12.00pm - 10.00pm
+      %p
+        Sunday
+        %br
+        12.00pm - 10.00pm
+
+    .column.non_mobile
+      %h4 View our menus
+      %p
+        = link_to 'RESTAURANT MENU'
+        %br
+        = link_to 'SUNDAY MENU'
+        %br
+        = link_to 'BAR MENU'
+        %br
+        = link_to 'BUFFETS'
+        %br
+        = link_to 'WINE LIST'
+        %br
+        = link_to 'BEER LIST'
+
+    .column.non_mobile
+      %h4 Gallery
+      .gallery_thumbs.footer_gallery
+        - GalleryImage.first(8).each do |image|
+          .gallery_thumb
+            = image_tag image.image.gallery_thumbnail
+      = link_to 'View our gallery', gallery_images_path
+
+#page_bottom
+  %p © Copyright 2016, Ringland Swan

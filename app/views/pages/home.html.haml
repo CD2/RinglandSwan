@@ -1,0 +1,14 @@
+- content_for :full_width do
+  #banner_wrapper.home_banner
+    = page_banner @page
+.page_columns
+  .main_column
+    = raw @page.body
+  .side_column
+    = image_tag 'home_map.jpg', class: 'home_map'
+.gallery_thumbs
+  - Page.featured.each do |page|
+    .gallery_thumb
+      = image_tag page.banner_images.first.image.featured
+      %h4= page.name
+      %span= summary(page)
