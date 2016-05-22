@@ -206,6 +206,8 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    heroku-deflater (0.6.2)
+      rack (>= 1.4.5)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -337,6 +339,7 @@ DEPENDENCIES
   fog
   friendly_id
   haml-rails
+  heroku-deflater
   jquery-rails
   listen (~> 3.0.5)
   mini_magick

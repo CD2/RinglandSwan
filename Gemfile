@@ -19,6 +19,7 @@ gem 'figaro'
 group :production do
   gem 'rails_12factor'
   gem 'fog'
+  gem 'heroku-deflater', :group => :production
 end
 
 group :development, :test do
