@@ -4,6 +4,7 @@
     %title RinglandswanCoUk
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    %meta{:content => "width=device-width, maximum-scale=1.0, minimum-scale=1.0, initial-scale=1", :name => "viewport"}/
   %body{class: "#{controller_name}_#{action_name}"}
     #page_wrapper
       = render 'header'
