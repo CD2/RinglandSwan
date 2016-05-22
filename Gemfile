@@ -14,6 +14,7 @@ gem "mini_magick"
 gem 'turbolinks', '~> 5.x'
 gem 'rails_12factor'
 gem 'bcrypt', '~> 3.1.7'
+gem 'figaro'
 
 group :production do
   gem 'rails_12factor'

@@ -1,5 +1,56 @@
-%h1 New booking
+- content_for :full_width do
+  #banner_wrapper
+    = page_banner @page
 
-= render 'form'
+.page_columns
+  .main_column
+    %h1 Book your table
+    %p With parties of 10 or more it helps us greatly if you can send us your starters and main courses on our pre-order form. The form can be downloaded here .
+    %p Please complete all of the following boxes. Once done click the submit button. We will contact you to confirm your reservation.
+    = form_for @booking do |f|
+      - if @booking.errors.any?
+        #error_explanation
+          %h2= "#{pluralize(@booking.errors.count, "error")} prohibited this booking from being saved:"
+          %ul
+            - @booking.errors.full_messages.each do |msg|
+              %li= msg
 
-= link_to 'Back', bookings_path
+      .field
+        = f.text_field :name, placeholder: 'Name'
+      .field
+        = f.text_field :telephone, placeholder: 'Telephone'
+      .field
+        = f.text_field :email, placeholder: 'Email'
+      .field
+        = f.label :number_of_people, "Now please tell us how many people you are reserving a table for"
+        = f.text_field :number_of_people
+      .field
+        = f.label :date, "Please enter the date of your reservation"
+        = f.date_field :date
+      .field
+        = f.label :time, "Please enter the preferred time of your reservation"
+        = f.time_select :time
+      .field
+        = f.label :message, "Please tell us of any food allergies in your group"
+        = f.text_area :message, placeholder: 'Known food allergies'
+      .actions
+        = f.submit 'Save'
+
+  .side_column
+    %p
+      Swan Inn
+      %bra
+      The Street
+      %br
+      Ringland
+      %br
+      Norwich
+      %br
+      NR8 6AB
+
+      %p
+        01603 869014
+
+      %p
+        info@ringlandswan.co.uk
+

@@ -1,3 +1,6 @@
+- provide :title, @page.page_title
+- provide :meta, @page.meta_description
+
 - content_for :full_width do
   #banner_wrapper
     = page_banner @page
@@ -13,17 +16,17 @@
     - else
       %h3 View our menus
       %p
-        = link_to 'RESTAURANT MENU'
+        = link_to 'RESTAURANT MENU', '/restaurant_menu.pdf'
         %br
-        = link_to 'SUNDAY MENU'
+        = link_to 'SUNDAY MENU', '/sunday_menu.pdf'
         %br
-        = link_to 'BAR MENU'
+        = link_to 'BAR MENU', '/bar_menu.pdf'
         %br
-        = link_to 'BUFFETS'
+        = link_to 'BUFFETS', '#'
         %br
-        = link_to 'WINE LIST'
+        = link_to 'WINE LIST', '#'
         %br
-        = link_to 'BEER LIST'
+        = link_to 'BEER LIST', '#'
 
       %h3 Booking
       %p

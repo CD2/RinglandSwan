@@ -1,0 +1,8 @@
+- content_for :full_width do
+  #banner_wrapper
+    = page_banner @page
+.page_columns
+  .main_column
+    %h1 Thank you for your booking
+    %p We will contact you shortly to confirm your reservation.
+    = link_to 'Back to home', root_path
