@@ -45,7 +45,7 @@
     .column.non_mobile
       %h4 Gallery
       .gallery_thumbs.footer_gallery
-        - GalleryImage.first(8).each do |image|
+        - GalleryImage.first(4).each do |image|
           .gallery_thumb
             = image_tag image.image.gallery_thumbnail
       = link_to 'View our gallery', gallery_images_path

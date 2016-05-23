@@ -14,7 +14,7 @@ class PagesController < ApplicationController
   private
 
     def set_page
-      @page = Page.find_by(machine_name: action_name) || Page.find(params[:id])
+      @page = Page.find_by(machine_name: action_name) || Page.friendly.find(params[:id])
     end
 
 end

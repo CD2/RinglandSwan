@@ -7,4 +7,7 @@ class Page < ApplicationRecord
 
   enum sidebar: [:gallery, :in_menu]
 
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
 end
