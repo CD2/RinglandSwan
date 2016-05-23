@@ -1,0 +1,10 @@
+- provide :title, 'Enquiry'
+
+%h3 Name
+%p= @enquiry.name
+
+%h3 Email
+%p= @enquiry.email
+
+%h3 Message
+%p= simple_format @enquiry.message

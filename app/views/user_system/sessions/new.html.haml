@@ -1,0 +1,15 @@
+#login_page
+
+  #login_image_container
+
+  #login_form
+
+    %h1 Log in
+
+    = form_for(:session, url: login_path) do |f|
+      .field 
+        = f.email_field :email, placeholder: "Email"
+      .field   
+        = f.password_field :password, placeholder: "Password"
+      .actions
+        = f.submit "Log in"

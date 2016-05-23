@@ -1,0 +1,44 @@
+= form_for [:admin, @page] do |f|
+
+  #two_panel_form
+    #main_panel
+      .field
+        = f.label :name
+        = f.text_field :name
+      .field
+        = f.label :body
+        = f.cktext_area :body
+      .field
+        = f.label :summary
+        = f.text_area :summary
+      = field_set_tag 'Banner' do
+        .field
+          - unless @page.new_record?
+            .image_gal
+              - @page.banner_images.each do |image|
+                = image_tag image.image.thumb
+
+          = f.label :images
+          = f.file_field :images, multiple: true
+        .field
+          = f.label :banner_caption
+          = f.text_field :banner_caption
+    #side_panel
+      .field
+        = f.label :menu_name
+        = f.text_field :menu_name
+      .field
+        = f.label :page_title
+        = f.text_field :page_title
+      .field
+        = f.label :meta_description
+        = f.text_area :meta_description
+      .field
+        = f.label :include_in_menu
+        = f.check_box :include_in_menu
+      .field
+        = f.label :featured
+        = f.check_box :featured
+
+  .actions
+    = f.submit

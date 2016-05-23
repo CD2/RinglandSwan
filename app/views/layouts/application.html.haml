@@ -8,6 +8,8 @@
     - if content_for?(:meta)
       %meta{:name => "description", :content => yield(:meta)}
   %body{class: "#{controller_name}_#{action_name}"}
+    - if signed_in?
+      = render 'admin_bar'
     #page_wrapper
       = render 'header'
       - if content_for? :full_width

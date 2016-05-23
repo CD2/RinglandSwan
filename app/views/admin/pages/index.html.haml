@@ -1,0 +1,13 @@
+%table
+  %thead
+    %tr
+      %th Name
+      %th Actions
+  %tbody
+    - @pages.each do |page|
+      %tr
+        %td= page.name
+        %td.action_columns
+          = link_to 'Show', page
+          = link_to 'Edit', edit_admin_page_path(page)
+          = link_to 'Destroy', [:admin, page], method: :delete, data: { confirm: 'Are you sure?' }

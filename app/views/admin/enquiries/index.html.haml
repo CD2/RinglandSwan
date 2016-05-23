@@ -1,0 +1,17 @@
+- provide :title, 'Enquiries'
+%table
+  %thead
+    %tr
+      %th Name
+      %th Email
+      %th Message
+      %th
+  %tbody
+    - @enquiries.each do |enquiry|
+      %tr
+        %td= enquiry.name
+        %td= enquiry.email
+        %td= enquiry.message
+        %td.action_columns
+          = link_to 'Show', [:admin, enquiry]
+          = link_to 'Destroy', [:admin, enquiry], method: :delete, data: { confirm: 'Are you sure?' }

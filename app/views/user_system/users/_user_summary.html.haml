@@ -1,0 +1,13 @@
+#team_summary
+  .team_image
+    %h3= user.name 
+    - unless user.avatar.blank?
+      = image_tag(user.avatar)
+  
+  .team_stats
+    .summary_box
+      Money Raised
+      %span= number_to_currency user.total_money_raised, locale: :en
+    .summary_box
+      Volunteered
+      %span= "#{number_with_precision user.total_hours_volunteered, strip_insignificant_zeros: true} hours"

@@ -1,0 +1,37 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", 'http-equiv' => "Content-Type"}/
+    %title Ringland Swan Administration
+    = stylesheet_link_tag    'admin_application', media: 'screen'
+    = javascript_include_tag 'application'
+    %link{:href => "/fav.png", :rel => "shortcut icon", :type => "image/png"}/
+    = javascript_include_tag Ckeditor.cdn_url
+    = csrf_meta_tags
+
+  %body
+    #admin_page_wrapper
+      #admin_sidebar
+        = link_to image_tag('logo.png'), root_path, class: 'admin_logo_link'
+        = render 'admin/admin_menu'
+      #admin_page
+        #admin_title_bar
+          %h1= yield :title
+        #admin_nav_bar
+          = render 'navigation_bar'
+        #admin_page_inner
+
+          - flash.each do |k, v|
+            %div{class: "alert alert-#{k}"}
+              = v
+          = yield
+
+    :javascript
+      (function(d) {
+        var config = {
+          kitId: 'zmv3blw',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);

@@ -1,0 +1,30 @@
+#content
+  #info_wrapper_container
+    #info_wrapper
+      .team_avatar
+        = image_tag(@user.avatar)
+      .team_blurb
+        %h1= @user.name
+        %h2= @team.name if @team
+        %ul.social_links
+          %li= link_to @user.linked_in.gsub("https://www.", ""), @user.linked_in  if @user.linked_in
+          %li= link_to @user.facebook.gsub("https://www.", ""), @user.facebook  if @user.facebook
+          %li= link_to @user.twitter.gsub("https://www.", ""), @user.twitter  if @user.twitter
+          %li= link_to @user.youtube.gsub("https://www.", ""), @user.youtube  if @user.youtube
+    %ul.image_grid.user_image_grid
+      - @user.entry_images.each do |image|
+        %li= image_tag(image.image.thumb)
+  #feed_wrapper
+    #entry_summary
+      .summary_box
+        Money Raised
+        %span= number_to_currency @user.total_money_raised, locale: :en
+      .summary_box
+        Volunteered
+        %span= "#{number_with_precision @user.total_hours_volunteered, strip_insignificant_zeros: true} hours"
+
+    #entry_feed
+      = render 'layouts/entry_feed', lim: 40, entries: @entries
+
+  #secondary_bar_wrapper
+    = render 'teams/team_summary', team: @team if @team 
