@@ -21,7 +21,9 @@ Rails.application.routes.draw do
     resources :enquiries, only: [:index, :destroy, :show]
     resources :bookings, only: [:index, :destroy, :show]
     resources :events, except: :show
-    resources :gallery_images, except: :show
+    resources :gallery_images, except: :show do
+      collection { post :upload }
+    end
   end
 
   scope module: :user_system do

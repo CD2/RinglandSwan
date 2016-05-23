@@ -1,0 +1,16 @@
+- provide :title, 'Gallery'
+= field_set_tag 'Add Images' do
+  = form_for [:admin, @gallery] do |f|
+    = f.file_field :images, name: 'images[]', multiple: true
+    = f.submit :upload
+%table
+  %thead
+    %tr
+      %th Image
+      %th Actions
+  %tbody
+    - @gallery_images.each do |image|
+      %tr
+        %td.thumbnail_cell= image_tag image.image.gallery_thumbnail
+        %td.action_columns
+          = link_to 'Delete', [:admin, image], method: :delete, data: { confirm: 'Are you sure?' }

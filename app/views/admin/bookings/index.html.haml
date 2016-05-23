@@ -1,1 +1,25 @@
-s
+- provide :title, 'Enquiries'
+%table
+  %thead
+    %tr
+      %th Name
+      %th Telephone
+      %th Email
+      %th Number of People
+      %th Date
+      %th Time
+      %th Message
+      %th
+  %tbody
+    - @bookings.each do |booking|
+      %tr
+        %td= booking.name
+        %td= booking.telephone
+        %td= booking.email
+        %td= booking.number_of_people
+        %td= booking.date.try{strftime("%D")}
+        %td= booking.time
+        %td= booking.message
+        %td.action_columns
+          = link_to 'Show', [:admin, booking]
+          = link_to 'Destroy', [:admin, booking], method: :delete, data: { confirm: 'Are you sure?' }

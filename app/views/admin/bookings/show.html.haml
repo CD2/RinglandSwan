@@ -1,0 +1,22 @@
+- provide :title, 'Booking'
+
+%h4 Name
+%p= @booking.name
+%h4 Telephone
+%p= @booking.telephone
+%h4 Email
+%p= @booking.email
+%h4 Number of People
+%p= @booking.number_of_people
+%h4 Date
+%p= @booking.date.try{strftime("%D")}
+%h4 Time
+%p= @booking.time
+%h4 Message
+%p= @booking.message
+
+
+
+
+
+

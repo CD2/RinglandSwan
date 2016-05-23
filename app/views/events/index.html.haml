@@ -10,4 +10,5 @@
     - @events.each do |event|
       .event
         %h2= event.name
+        = image_tag event.banner.banner
         %p= raw event.body

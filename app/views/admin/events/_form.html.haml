@@ -1,0 +1,16 @@
+= form_for [:admin, @event] do |f|
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :body
+    = f.cktext_area :body
+  = field_set_tag 'Image' do
+    - unless @event.new_record? || @event.banner.blank?
+      = image_tag @event.banner.featured
+    .field
+      = f.label :banner
+      = f. file_field :banner
+  .actions
+    = f.submit

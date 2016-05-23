@@ -16,7 +16,7 @@
           - unless @page.new_record?
             .image_gal
               - @page.banner_images.each do |image|
-                = image_tag image.image.thumb
+                = image_tag image.image.featured
 
           = f.label :images
           = f.file_field :images, multiple: true

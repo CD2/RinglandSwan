@@ -1,0 +1,13 @@
+- provide :title, 'Events'
+%table
+  %thead
+    %tr
+      %th Name
+      %th Actions
+  %tbody
+    - @events.each do |event|
+      %tr
+        %td= event.name
+        %td.action_columns
+          = link_to 'Edit', edit_admin_event_path(event)
+          = link_to 'Delete', [:admin, event], method: :delete, data: { confirm: 'Are you sure?' }

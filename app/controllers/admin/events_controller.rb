@@ -1,35 +1,38 @@
 class Admin::EventsController < AdminController
 
   def index
-    @events = Page.all
+    @events = Event.all
   end
 
   def new
-    @event = Page.new
+    @event = Event.new
   end
 
   def edit
+    @event = Event.find(params[:id])
   end
 
   def create
-    @event = Page.new(event_params)
+    @event = Event.new(event_params)
 
     if @event.save
-      redirect_to @event
+      redirect_to events_path
     else
       render :new
     end
   end
 
   def update
+    @event = Event.find(params[:id])
     if @event.update(event_params)
-      redirect_to @event
+      redirect_to events_path
     else
       render :edit
     end
   end
 
   def destroy
+    @event = Event.find(params[:id])
     @event.destroy
     redirect_to admin_events_url
   end
@@ -37,7 +40,7 @@ class Admin::EventsController < AdminController
   private
 
     def event_params
-      params.requre(:event).permit(:name, :banner, :body)
+      params.require(:event).permit(:name, :banner, :body)
     end
   
 
