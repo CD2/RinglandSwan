@@ -27,7 +27,7 @@
         = f.text_field :number_of_people
       .field
         = f.label :date, "Please enter the date of your reservation"
-        = f.date_field :date
+        = f.text_field :date, class: 'datepicker'
       .field
         = f.label :time, "Please enter the preferred time of your reservation"
         = f.text_field :time, type: :time

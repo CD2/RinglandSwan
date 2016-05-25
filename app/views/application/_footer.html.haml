@@ -1,3 +1,9 @@
+#testimonials
+  - Testimonial.all.shuffle.first(3).each do |testomonial|
+    .testimonial
+      %h4= testomonial.name
+      = simple_format testomonial.body
+      %span= testomonial.author
 #footer
   #footer_inner
     .column
@@ -30,17 +36,9 @@
     .column.non_mobile
       %h4 View our menus
       %p
-        = link_to 'RESTAURANT MENU', '/restaurant_menu.pdf'
-        %br
-        = link_to 'SUNDAY MENU', '/sunday_menu.pdf'
-        %br
-        = link_to 'BAR MENU', '/bar_menu.pdf'
-        %br
-        = link_to 'BUFFETS', '#'
-        %br
-        = link_to 'WINE LIST', '#'
-        %br
-        = link_to 'BEER LIST', '#'
+        - Page.menu_page.each do |menu|
+          = link_to menu.name, menu
+          %br
 
     .column.non_mobile
       %h4 Gallery
