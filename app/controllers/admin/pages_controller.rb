@@ -17,6 +17,7 @@ class Admin::PagesController < AdminController
 
     if @page.save
       process_images
+      eval_tags
       redirect_to @page
     else
       render :new
@@ -26,6 +27,7 @@ class Admin::PagesController < AdminController
   def update
     if @page.update(page_params)
       process_images
+      eval_tags
       redirect_to @page
     else
       render :edit
@@ -45,12 +47,21 @@ class Admin::PagesController < AdminController
       end
     end
 
+    def eval_tags
+      if (tags = params[:page][:gallery_tags])
+        tags.split(',').each do |tag|
+          t = Tag.find_or_create_by(tag: tag.strip)
+          @page.page_tags.create(tag_id: t.id)
+        end
+      end
+    end
+
     def set_page
       @page = Page.friendly.find(params[:id])
     end
 
     def page_params
-      params.require(:page).permit(:name, :body, :summary, :page_title, :banner_caption, :meta_description, :menu_name, :include_in_menu, :featured, :sidebar, :images)
+      params.require(:page).permit(:name, :body, :summary, :page_title, :banner_caption, :meta_description, :menu_name, :include_in_menu, :featured, :sidebar, :images, :gallery_tags)
     end
 
 end

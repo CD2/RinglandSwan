@@ -7,7 +7,6 @@
 .page_columns
   .main_column
     %h1 Book your table
-    %p With parties of 10 or more it helps us greatly if you can send us your starters and main courses on our pre-order form. The form can be downloaded here .
     %p Please complete all of the following boxes. Once done click the submit button. We will contact you to confirm your reservation.
     = form_for @booking do |f|
       - if @booking.errors.any?
@@ -32,9 +31,6 @@
       .field
         = f.label :time, "Please enter the preferred time of your reservation"
         = f.text_field :time, type: :time
-      .field
-        = f.label :message, "Please tell us of any food allergies in your group"
-        = f.text_area :message, placeholder: 'Known food allergies'
       .actions
         = f.submit 'Save'
 

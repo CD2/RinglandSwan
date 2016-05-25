@@ -47,17 +47,6 @@ task gen_pages: :environment do
                sidebar: 0
            },
            {
-               name: 'Food and Drink',
-               body: seed_html('food_and_drink'),
-               page_title: 'Menus |eating out in Norfolk | The Ringland Swan',
-               meta_description: 'The Ringland Swan offers a wide range of real ales and wines along with the best quality gastro style menu using the best local produce.',
-               menu_name: 'Food & Drink',
-               include_in_menu: true,
-               order: 5,
-               machine_name: :food_and_drink,
-               sidebar: 0
-           },
-           {
                 name: 'What\'s on / Events',
                 body: seed_html('whats_on_events'),
                 page_title: 'Norfolk pubs | What’s on | The Ringland Swan',
@@ -99,7 +88,43 @@ task gen_pages: :environment do
                machine_name: :contact_us,
                featured: true,
                meta_page: true
-           }
+           },
+           {
+               name: 'Restaurant Menu',
+               body: seed_html('restaurant_menu'),
+               machine_name: :contact_us,
+               menu: true
+           },
+           {
+               name: 'Sunday Menu',
+               body: seed_html('sunday_menu'),
+               machine_name: :sunday_menu,
+               menu: true
+           },
+           {
+               name: 'Bar Menu',
+               body: seed_html('bar_menu'),
+               machine_name: :bar_menu,
+               menu: true
+           },
+           {
+               name: 'Buffets',
+               body: seed_html('buffets'),
+               machine_name: :buffets,
+               menu: true
+           },
+           {
+               name: 'Wine List',
+               body: seed_html('wine_list'),
+               machine_name: :wine_list,
+               menu: true
+           },
+           {
+               name: 'Beer List',
+               body: seed_html('beer_list'),
+               machine_name: :beer_list,
+               menu: true
+           },
   ]
 
   pages.each do |page|

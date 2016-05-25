@@ -3,11 +3,13 @@
   %thead
     %tr
       %th Name
+      %th Tags
       %th Actions
   %tbody
     - @pages.each do |page|
       %tr
         %td= page.name
+        %td= page.tags.collect{|t| t.tag}.join(', ')
         %td.action_columns
           = link_to 'Show', page
           = link_to 'Edit', edit_admin_page_path(page)

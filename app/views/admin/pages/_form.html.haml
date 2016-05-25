@@ -39,6 +39,12 @@
       .field
         = f.label :featured
         = f.check_box :featured
+      .field
+        = f.label :menu, "This is a menu"
+        = f.check_box :menu
+      .field
+        = f.label :gallery_tags, "Show images on this page with the following tags (Separate with commas)"
+        = f.text_field :gallery_tags
 
   .actions
     = f.submit

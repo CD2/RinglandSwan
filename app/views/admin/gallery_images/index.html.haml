@@ -7,10 +7,13 @@
   %thead
     %tr
       %th Image
+      %th Tags
       %th Actions
   %tbody
     - @gallery_images.each do |image|
       %tr
         %td.thumbnail_cell= image_tag image.image.gallery_thumbnail
+        %td= image.gallery_tags.collect { |gt| gt.tag.tag }.join(', ')
         %td.action_columns
           = link_to 'Delete', [:admin, image], method: :delete, data: { confirm: 'Are you sure?' }
+          = link_to 'Add Tags', [:edit, :admin, image]

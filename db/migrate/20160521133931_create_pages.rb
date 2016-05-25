@@ -16,6 +16,7 @@ class CreatePages < ActiveRecord::Migration[5.0]
       t.integer :order
       t.boolean :featured
       t.integer :sidebar
+      t.boolean :menu
 
       t.timestamps
     end
