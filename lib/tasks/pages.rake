@@ -15,6 +15,7 @@ task gen_pages: :environment do
            {
                name: 'About us',
                body: seed_html('about'),
+               summary: 'The Ringland Swan has been fully refurbished and now provides one of the best pubs in Norfolk along with offering a fine dining experience in ourrestaurant.',
                page_title: 'Dog friendly pubs Norfolk | The Ringland Swan',
                meta_description: 'The Ringland Swan has been refurbished to become one of the best pubs in Norfolk. It’s also a dog friendly pub, welcoming dogs into the bar area.',
                menu_name: 'About Us',
@@ -49,6 +50,7 @@ task gen_pages: :environment do
            {
                 name: 'What\'s on / Events',
                 body: seed_html('whats_on_events'),
+                summary: 'We regularly hold special events throughout the year. From themed nights to live music, weekly quiz nights and special menus.',
                 page_title: 'Norfolk pubs | What’s on | The Ringland Swan',
                 meta_description: 'The Ringland Swan regularly hold special events throughout the year, being one of the Norfolk pubs that holds the annual raft race at Wensum Valley.',
                 menu_name: 'What\'s on / Events',
@@ -80,6 +82,7 @@ task gen_pages: :environment do
            },
            {
                name: 'Contact us',
+               summary: 'If you’re looking for places to eat in Norfolk, or just want a relaxing pub to enjoy a quiet drink – you couldn’t do better than calling in at The Ringland Swan.',
                page_title: 'Places to eat in Norwich |Contact us, The Ringland Swan',
                meta_description: 'Contact us today at The Ringland Swan, one of the best places to eat in Norwich. Providing you with a satisfactory service and an excellent meal.',
                include_in_menu: true,
@@ -92,7 +95,7 @@ task gen_pages: :environment do
            {
                name: 'Restaurant Menu',
                body: seed_html('restaurant_menu'),
-               machine_name: :contact_us,
+               machine_name: :restaurant_menu,
                menu: true
            },
            {
@@ -146,6 +149,8 @@ task gen_pages: :environment do
   (1..3).to_a.each do |event|
     Event.create!(name: "Event #{event}", body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel enim ut purus tempus cursus in ut magna. Aenean at libero iaculis, rutrum odio vitae, laoreet quam. Suspendisse potenti.</p>')
   end
+
+
 
 
 end

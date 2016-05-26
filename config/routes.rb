@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :testimonials
   root 'pages#home'
 
   get '/about'                   => 'pages#about'

@@ -68,6 +68,17 @@ img
 
 .main_column
   +flex(2)
+  &.menu_page
+    background: white
+    padding: 40px
+    box-shadow: 0 0 50px rgba(0,0,0,0.3)
+
+  td
+    padding: 10px
+    font-size: 0.875rem
+  table
+    width: 100%
+
 
 .central_column
   padding: 0 30px
@@ -194,7 +205,7 @@ p.intro_paragraph
   bottom: 0
   z-index: 10
 
-#highlight, #header, #page, #footer, #page_bottom
+#highlight, #header, #page, #footer, #page_bottom, #testimonials
   max-width: 1400px
   margin: 0 auto
   @media screen and (max-width: 1464px)

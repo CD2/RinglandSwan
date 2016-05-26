@@ -2,21 +2,23 @@
 - provide :meta, @page.meta_description
 
 - content_for :full_width do
-  #banner_wrapper
-    = page_banner @page
+  - if @page.banner_images.any?
+    #banner_wrapper
+      = page_banner @page
 .page_columns
-  .main_column
+  .main_column{class: "#{'menu_page' if @page.menu}"}
     = raw @page.body
-  .side_column
-    .gallery_thumbs.small_gallery
-      - @page.gallery_images.first(8).each do |image|
-        .gallery_thumb
-          = image_tag image.image.gallery_thumbnail
+  - unless @page.menu
+    .side_column
+      .gallery_thumbs.small_gallery
+        - @page.gallery_images.first(8).each do |image|
+          .gallery_thumb
+            = image_tag image.image.gallery_thumbnail
 
-    %h3 Booking
-    %p
-      If you want to book a table, you can call us on 01603 869 014, email us at
-      = mail_to 'info@ringlandswan.co.uk'
-      or use our booking form by clicking the link below
-    %p
-      = link_to 'Book online', book_online_path, class: 'book_button'
+      %h3 Booking
+      %p
+        If you want to book a table, you can call us on 01603 869 014, email us at
+        = mail_to 'info@ringlandswan.co.uk'
+        or use our booking form by clicking the link below
+      %p
+        = link_to 'Book online', book_online_path, class: 'book_button'
