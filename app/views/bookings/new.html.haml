@@ -31,6 +31,7 @@
       .field
         = f.label :time, "Please enter the preferred time of your reservation"
         = f.text_field :time, type: :time
+      = f.hidden_field :booking_type
       .actions
         = f.submit 'Save'
 
@@ -52,3 +53,5 @@
       %p
         info@ringlandswan.co.uk
 
+    %p
+      = link_to 'Download a menu', '/The Ringland Swan Menu May 2016.pdf', class: 'book_button'

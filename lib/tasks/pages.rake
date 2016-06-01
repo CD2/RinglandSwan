@@ -93,27 +93,9 @@ task gen_pages: :environment do
                meta_page: true
            },
            {
-               name: 'Restaurant Menu',
+               name: 'Menu',
                body: seed_html('restaurant_menu'),
                machine_name: :restaurant_menu,
-               menu: true
-           },
-           {
-               name: 'Sunday Menu',
-               body: seed_html('sunday_menu'),
-               machine_name: :sunday_menu,
-               menu: true
-           },
-           {
-               name: 'Bar Menu',
-               body: seed_html('bar_menu'),
-               machine_name: :bar_menu,
-               menu: true
-           },
-           {
-               name: 'Buffets',
-               body: seed_html('buffets'),
-               machine_name: :buffets,
                menu: true
            },
            {
@@ -146,14 +128,15 @@ task gen_pages: :environment do
     GalleryImage.create!(image: File.open(photo.to_s))
   end
 
-  (1..3).to_a.each do |event|
-    Event.create!(name: "Event #{event}", body: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vel enim ut purus tempus cursus in ut magna. Aenean at libero iaculis, rutrum odio vitae, laoreet quam. Suspendisse potenti.</p>')
-  end
+
+  Event.create!(name: "Annual Ringland Charity Raft Race", body: '<p>The 2016 Ringland Raft Race is taking place on 31st July at 1pm. If you want to enter a team just complete the booking form.</p>
+  <p>All the rafts must be handmade using whatever materials you can get hold of. No sails, pups, engines, propellers or mono hulls are allowed. All you can use is brute strength and oars. The event is a great fun day for all the family even if you don’t take part in the race itself.</p>
+  <p>Why not book a table in the restaurant for lunch and sit back and watch all the action.</p>')
 
 
 
 
-end
+      end
 
 def seed_html html_file
   File.open(File.join(Rails.root, "seed_data/html/#{html_file}.html")).read

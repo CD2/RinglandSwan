@@ -2,16 +2,29 @@ class BookingsController < ApplicationController
 
   def new
     @page = Page.find_by(machine_name: 'book_table')
-    @booking = Booking.new
+    @booking = Booking.table.new
   end
 
   def create
     @booking = Booking.new(booking_params)
 
     if @booking.save
-      redirect_to book_online_thanks_path
+      if @booking.event?
+        @page = Page.find_by(machine_name: 'whats_on_events')
+        @events = Event.all
+        render 'events/index'
+      else
+        redirect_to book_online_thanks_path
+      end
     else
-      render :new
+      if @booking.event?
+        @page = Page.find_by(machine_name: 'whats_on_events')
+        @events = Event.all
+        render 'events/index'
+      else
+        @page = Page.find_by(machine_name: 'book_table')
+        render :new
+      end
     end
   end
 
@@ -20,10 +33,8 @@ class BookingsController < ApplicationController
   end
 
   private
-
-
   # Only allow a trusted parameter "white list" through.
     def booking_params
-      params.require(:booking).permit(:name, :telephone, :email, :number_of_people, :date, :time, :message)
+      params.require(:booking).permit(:name, :telephone, :email, :number_of_people, :date, :time, :message, :event_id, :booking_type)
     end
 end

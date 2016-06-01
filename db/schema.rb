@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20160525184522) do
     t.datetime "date"
     t.string   "time"
     t.text     "message"
+    t.integer  "event_id"
+    t.integer  "booking_type"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end

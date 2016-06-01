@@ -8,6 +8,8 @@ class CreateBookings < ActiveRecord::Migration[5.0]
       t.datetime :date
       t.string :time
       t.text :message
+      t.integer :event_id
+      t.integer :booking_type
 
       t.timestamps
     end
