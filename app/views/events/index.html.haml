@@ -6,24 +6,6 @@
 .page_columns.events_index
   .main_column
     = raw @page.body
-    - if @booking.new_record?
-      = form_for @booking do |f|
-        .field
-          = f.text_field :name, placeholder: 'Name'
-        .field
-          = f.text_field :telephone, placeholder: 'Telephone'
-        .field
-          = f.text_field :email, placeholder: 'Email'
-        .field
-          = f.label :number_of_people, "Now please tell us how many people you are attending"
-          = f.text_field :number_of_people
-        .field.select_field
-          = f.label :event_id, 'Select Event'
-          = f.collection_select :event_id, Event.all, :id, :name, prompt: '-- Please Select --'
-        = f.hidden_field :booking_type
-        = f.submit 'Book now'
-    - else
-      %h3 Thanks for your booking
 
 
   .side_column
