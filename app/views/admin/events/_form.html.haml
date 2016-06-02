@@ -12,5 +12,12 @@
     .field
       = f.label :banner
       = f. file_field :banner
+
+  = field_set_tag 'Attachment' do
+    - unless @event.new_record? || @event.attachment.blank?
+      = @event.attachment.url.split('/').last rescue ''
+    .field
+      = f.label :attachment
+      = f. file_field :attachment
   .actions
     = f.submit

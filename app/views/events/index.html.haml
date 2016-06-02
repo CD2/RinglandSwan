@@ -14,3 +14,4 @@
         %h2= event.name
         = image_tag event.banner.banner
         %p= raw event.body
+        = link_to(event.attachment.url.split('/').last, event.attachment.url) rescue ''
