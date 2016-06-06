@@ -42,4 +42,10 @@ Rails.application.routes.draw do
   resources :enquiries, only: [:create, :new]
   resources :pages, path: '', only: :show
 
+  get '/index.html', to: redirect('/')
+  get '/reservations.html', to: redirect('/book-online')
+  get '/bar.html', to: redirect('/restaurant')
+  get '/gallery.html', to: redirect('/gallery')
+  get '/heroes.html', to: redirect('/restaurant')
+
 end
