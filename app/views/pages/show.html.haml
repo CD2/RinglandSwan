@@ -7,7 +7,12 @@
       = page_banner @page
 .page_columns
   .main_column{class: "#{'menu_page' if @page.menu}"}
-    = raw @page.body
+    - if @page.menu
+      .menu_container
+        = raw @page.body
+    - else
+      = raw @page.body
+
   - unless @page.menu
     .side_column
       .gallery_thumbs.small_gallery
