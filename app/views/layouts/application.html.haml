@@ -19,8 +19,8 @@
 
       fbq('init', '288341524838270');
       fbq('track', "PageView");
-%noscript
-  %img{:height => "1", :src => "https://www.facebook.com/tr?id=288341524838270&ev=PageView&noscript=1", :style => "display:none", :width => "1"}/
+    %noscript
+      %img{:height => "1", :src => "https://www.facebook.com/tr?id=288341524838270&ev=PageView&noscript=1", :style => "display:none", :width => "1"}/
   %body{class: "#{controller_name}_#{action_name}"}
     - if signed_in?
       = render 'admin_bar'
