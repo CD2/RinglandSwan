@@ -13,11 +13,10 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery-ui
-//= require turbolinks
 //= require ckeditor/init
 //= require_tree .
 
-$(document).on('turbolinks:load', function() {
+$(function () {
 
     $('#slides').slidesjs({
         navigation: {

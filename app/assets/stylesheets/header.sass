@@ -63,13 +63,13 @@
     padding: 10px
     font-weight: 100
     text-transform: uppercase
-  @media screen and (max-width: 1360px)
+  @media screen and (max-width: 1360px) and (min-width: 721px)
     margin-left: 0
     left: 400px
     top: 54px
     a
       padding: 4px 10px
-    @media screen and (max-width: 1000px)
+    @media screen and (max-width: 1000px)  and (min-width: 721px)
       left: 170px
   @media screen and (max-width: 720px)
     right: 0
@@ -119,10 +119,15 @@
     margin: 8px 0
 
 @media screen and (max-width: 720px)
-  #highlight, #page
-    position: relative
-    transition: right 0.3s
-    right: 0
-  .menu_open
-    #page, #highlight
-      right: 240px
+  #main_menu
+    right: -240px
+    width: 200px
+    position: absolute
+    min-height: 100vh
+    background-color: #1d4460
+    z-index: 100
+    transition: 0.3s
+    padding: 10px
+    top: 100px
+  .menu_open #main_menu
+    right: -16px
