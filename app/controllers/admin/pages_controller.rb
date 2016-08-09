@@ -61,7 +61,7 @@ class Admin::PagesController < AdminController
     end
 
     def page_params
-      params.require(:page).permit(:name, :body, :summary, :page_title, :banner_caption, :meta_description, :menu_name, :include_in_menu, :featured, :sidebar, :images, :gallery_tags)
+      params.require(:page).permit(:name, :body, :summary, :page_title, :banner_caption, :meta_description, :menu_name, :include_in_menu, :featured, :sidebar, :images, :gallery_tags, :images, :menu)
     end
 
 end
