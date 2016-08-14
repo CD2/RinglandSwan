@@ -7,7 +7,12 @@ class FileUploader < CarrierWave::Uploader::Base
   # include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  storage :fog
+  if Rails.env.development?
+    storage :file
+  else
+    storage :fog
+  end
+
   # storage :fog
 
   # Override the directory where uploaded files will be stored.
@@ -25,7 +30,7 @@ class FileUploader < CarrierWave::Uploader::Base
   # end
 
   # Process files as they are uploaded:
-  # process :scale => [200, 300]
+  # process :scale => [200, 300]r
   #
   # def scale(width, height)
   #   # do something

@@ -1,0 +1,27 @@
+- provide :title, 'New PDF Menu'
+= form_for [:admin, @page] do |f|
+
+  #two_panel_form
+    #main_panel
+      .field
+        = f.label :name
+        = f.text_field :name
+      .field
+        = f.label :page_title
+        = f.text_field :page_title
+      .field
+        = f.label :meta_description
+        = f.text_area :meta_description
+      .field
+        = f.label :pdf, 'Menu PDF'
+        = f.file_field :pdf
+      .field.hidden
+        = f.check_box :menu, checked: true
+        = f.check_box :display_as_pdf, checked: true
+
+
+
+
+
+  .actions
+    = f.submit

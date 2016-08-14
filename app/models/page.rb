@@ -17,4 +17,6 @@ class Page < ApplicationRecord
   has_many :tags, through: :page_tags
   has_many :gallery_images, through: :tags
 
+  mount_uploader :pdf, FileUploader
+
 end

@@ -33,7 +33,10 @@
       %h4 View our menus
       %p
         - Page.menu_page.each do |menu|
-          = link_to menu.name, menu
+          - if menu.display_as_pdf?
+            = link_to menu.name, menu.pdf.try(:url)
+          - else
+            = link_to menu.name, menu
           %br
 
     .column.non_mobile

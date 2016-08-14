@@ -9,6 +9,10 @@ class Admin::PagesController < AdminController
     @page = Page.new
   end
 
+  def pdf_menu
+    @page = Page.new
+  end
+
   def edit
   end
 
@@ -42,9 +46,12 @@ class Admin::PagesController < AdminController
   private
 
     def process_images
-      params["page"]["images"].each do |image|
-        @page.banner_images.create(image: image) unless image.blank?
+      if params["page"]["images"]
+        params["page"]["images"].each do |image|
+          @page.banner_images.create(image: image) unless image.blank?
+        end
       end
+
     end
 
     def eval_tags
@@ -61,7 +68,7 @@ class Admin::PagesController < AdminController
     end
 
     def page_params
-      params.require(:page).permit(:name, :body, :summary, :page_title, :banner_caption, :meta_description, :menu_name, :include_in_menu, :featured, :sidebar, :images, :gallery_tags, :images, :menu)
+      params.require(:page).permit(:name, :body, :summary, :page_title, :banner_caption, :meta_description, :menu_name, :include_in_menu, :featured, :sidebar, :images, :gallery_tags, :images, :menu, :pdf, :display_as_pdf)
     end
 
 end

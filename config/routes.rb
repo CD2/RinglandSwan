@@ -22,7 +22,9 @@ Rails.application.routes.draw do
   delete  'logout'    => 'user_system/sessions#destroy'
 
   namespace :admin do
-    resources :pages, except: :show
+    resources :pages, except: :show do
+      collection { get :pdf_menu }
+    end
     resources :enquiries, only: [:index, :destroy, :show]
     resources :bookings, only: [:index, :destroy, :show]
     resources :events, except: :show
