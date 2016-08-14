@@ -8,8 +8,12 @@
 .page_columns
   .main_column{class: "#{'menu_page' if @page.menu}"}
     - if @page.menu
-      .menu_container
-        = raw @page.body
+      - if @page.display_as_pdf
+        %h1= @page.name
+        %p= link_to 'Download Menu', @page.pdf.try(:url)
+      - else
+        .menu_container
+          = raw @page.body
     - else
       = raw @page.body
 
