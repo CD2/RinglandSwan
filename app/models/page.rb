@@ -6,7 +6,7 @@ class Page < ApplicationRecord
 
   scope :menu, -> { order(order: :asc).where(include_in_menu: true) }
   scope :featured, -> { where(featured: true) }
-  scope :menu_page, -> { where(menu: true) }
+  scope :menu_page, -> { where(menu: true).order(order: :asc) }
 
   enum sidebar: [:gallery, :in_menu]
 
