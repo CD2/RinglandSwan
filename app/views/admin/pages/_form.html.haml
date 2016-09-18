@@ -17,6 +17,7 @@
             .image_gal
               - @page.banner_images.each do |image|
                 = image_tag image.image.featured
+                = link_to 'Delete', [:admin, @page, image], method: :delete, data: {confirm: 'Are you sure?'}
 
           = f.label :images
           = f.file_field :images, multiple: true

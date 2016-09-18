@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :pages, except: :show do
       collection { get :pdf_menu }
+      resources :banner_image, only: :destroy
     end
     resources :enquiries, only: [:index, :destroy, :show]
     resources :bookings, only: [:index, :destroy, :show]
