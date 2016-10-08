@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  match '/sitemap', to: 'pages#sitemap', via: 'get'
+
   get '/index.html', to: redirect('/')
   get '/reservations.html', to: redirect('/book-online')
   get '/bar.html', to: redirect('/restaurant')
@@ -48,6 +51,7 @@ Rails.application.routes.draw do
   resources :gallery_images, path: 'gallery', only: [:index]
   resources :enquiries, only: [:create, :new]
   resources :pages, path: '', only: :show
+
 
 
 

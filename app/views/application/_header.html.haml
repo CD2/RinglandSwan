@@ -3,11 +3,7 @@
 
     #logo
       = link_to image_tag('logo.png', class: 'logo_image', alt: 'Ringland Swan'), root_path
-      - if current_page?(root_path)
-        %h1 Ringland Swan
-      - else
-        %h2 Ringland Swan
-
+      
     #header_contact
       .header_contact_item
         %span Tel: 01603 869014
