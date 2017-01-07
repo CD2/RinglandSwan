@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
 
   def new
     @page = Page.find_by(machine_name: 'book_table')
@@ -9,6 +10,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
 
     if @booking.save
+      EnquiriesMailer.booking(@booking).deliver_now
       if @booking.event?
         @page = Page.find_by(machine_name: 'whats_on_events')
         @events = Event.all

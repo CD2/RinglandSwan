@@ -7,7 +7,7 @@ class EnquiriesController < ApplicationController
 
     def create
       @enquiry = Enquiry.new(enquiry_params)
-
+      EnquiriesMailer.enquiry(@enquiry).deliver_now
       if @enquiry.save
         redirect_to contact_us_thanks_path
       else

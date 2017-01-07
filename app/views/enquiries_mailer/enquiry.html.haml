@@ -1,0 +1,11 @@
+%h2 New website enquiry
+
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Name:
+  = @enquiry.name
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Email:
+  = @enquiry.email
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Message:
+  = simple_format @enquiry.message

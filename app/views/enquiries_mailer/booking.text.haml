@@ -1,0 +1,17 @@
+Name
+= @booking.name
+
+Telephone
+= @booking.telephone
+
+Email
+= @booking.email
+
+Number_of_people
+= @booking.number_of_people
+
+Date
+= @booking.date.strftime("%D") if @booking.date
+
+Time
+= @booking.time

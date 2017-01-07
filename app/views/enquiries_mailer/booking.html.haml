@@ -1,0 +1,26 @@
+%h2 New booking through the website
+
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Name
+  = @booking.name
+
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Telephone
+  = @booking.telephone
+
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Email
+  = @booking.email
+
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Number_of_people
+  = @booking.number_of_people
+
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Date
+  = @booking.date.strftime("%D") if @booking.date
+
+%p{:style => "margin:0;padding-bottom:0"}
+  %strong Time
+  = @booking.time
+
