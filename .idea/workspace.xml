@@ -67,12 +67,12 @@
       <file leaf-file-name="application.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+            <state relative-caret-position="465">
+              <caret line="31" column="11" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="31" selection-end-column="11" />
               <folding>
-                <marker date="1486389223000" expanded="true" signature="512:809" ph="{...}" />
-                <marker date="1486389223000" expanded="true" signature="547:624" ph="{...}" />
-                <marker date="1486389223000" expanded="true" signature="2011:2103" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
+                <marker date="1486389370000" expanded="true" signature="512:809" ph="{...}" />
+                <marker date="1486389370000" expanded="true" signature="547:624" ph="{...}" />
+                <marker date="1486389370000" expanded="true" signature="2012:2104" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
               </folding>
             </state>
           </provider>
@@ -629,12 +629,12 @@
       <workItem from="1473356443727" duration="1191000" />
       <workItem from="1483790614102" duration="1976000" />
       <workItem from="1483893278370" duration="40000" />
-      <workItem from="1486389187111" duration="37000" />
+      <workItem from="1486389187111" duration="184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="98739000" />
+    <option name="totallyTimeSpent" value="98886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="23" width="1920" height="1009" extended-state="0" />
@@ -1061,12 +1061,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+        <state relative-caret-position="465">
+          <caret line="31" column="11" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="31" selection-end-column="11" />
           <folding>
-            <marker date="1486389223000" expanded="true" signature="512:809" ph="{...}" />
-            <marker date="1486389223000" expanded="true" signature="547:624" ph="{...}" />
-            <marker date="1486389223000" expanded="true" signature="2011:2103" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
+            <marker date="1486389370000" expanded="true" signature="512:809" ph="{...}" />
+            <marker date="1486389370000" expanded="true" signature="547:624" ph="{...}" />
+            <marker date="1486389370000" expanded="true" signature="2012:2104" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
           </folding>
         </state>
       </provider>
