@@ -67,13 +67,17 @@
       <file leaf-file-name="application.html.haml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="489">
-              <caret line="58" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+            <state relative-caret-position="300">
+              <caret line="38" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
               <folding>
-                <marker date="1486391426000" expanded="true" signature="1058:1694" ph="{...}" />
-                <marker date="1486391426000" expanded="true" signature="1081:1173" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
-                <marker date="1486391426000" expanded="true" signature="1754:2051" ph="{...}" />
-                <marker date="1486391426000" expanded="true" signature="1789:1866" ph="{...}" />
+                <marker date="1487792957000" expanded="true" signature="1071:1308" ph="{...}" />
+                <marker date="1487792957000" expanded="true" signature="1122:1168" ph="{...}" />
+                <marker date="1487792957000" expanded="true" signature="1397:1437" ph="  ga('create', 'UA-91484641-1', 'auto');" />
+                <marker date="1487792957000" expanded="true" signature="1444:1469" ph="  ga('send', 'pageview');" />
+                <marker date="1487792957000" expanded="true" signature="1505:2141" ph="{...}" />
+                <marker date="1487792957000" expanded="true" signature="1528:1620" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
+                <marker date="1487792957000" expanded="true" signature="2201:2498" ph="{...}" />
+                <marker date="1487792957000" expanded="true" signature="2236:2313" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -207,7 +211,7 @@
     <option name="x" value="1920" />
     <option name="y" value="23" />
     <option name="width" value="1920" />
-    <option name="height" value="1009" />
+    <option name="height" value="1057" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -342,9 +346,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
       <pane id="RailsProjectView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -631,24 +635,25 @@
       <workItem from="1483790614102" duration="1976000" />
       <workItem from="1483893278370" duration="40000" />
       <workItem from="1486389187111" duration="495000" />
-      <workItem from="1486391420742" duration="6000" />
+      <workItem from="1486391420742" duration="622000" />
+      <workItem from="1487792915077" duration="43000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99203000" />
+    <option name="totallyTimeSpent" value="99862000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1920" y="23" width="1920" height="1009" extended-state="0" />
+    <frame x="1920" y="23" width="1920" height="1057" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19488817" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19648562" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33085898" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32996973" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32943678" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1062,13 +1067,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/layouts/application.html.haml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="489">
-          <caret line="58" column="20" lean-forward="false" selection-start-line="52" selection-start-column="20" selection-end-line="58" selection-end-column="20" />
+        <state relative-caret-position="300">
+          <caret line="38" column="6" lean-forward="false" selection-start-line="32" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
           <folding>
-            <marker date="1486391426000" expanded="true" signature="1058:1694" ph="{...}" />
-            <marker date="1486391426000" expanded="true" signature="1081:1173" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
-            <marker date="1486391426000" expanded="true" signature="1754:2051" ph="{...}" />
-            <marker date="1486391426000" expanded="true" signature="1789:1866" ph="{...}" />
+            <marker date="1487792957000" expanded="true" signature="1071:1308" ph="{...}" />
+            <marker date="1487792957000" expanded="true" signature="1122:1168" ph="{...}" />
+            <marker date="1487792957000" expanded="true" signature="1397:1437" ph="  ga('create', 'UA-91484641-1', 'auto');" />
+            <marker date="1487792957000" expanded="true" signature="1444:1469" ph="  ga('send', 'pageview');" />
+            <marker date="1487792957000" expanded="true" signature="1505:2141" ph="{...}" />
+            <marker date="1487792957000" expanded="true" signature="1528:1620" ph="{&quot;kitId&quot;: 'zmv3blw'...}" />
+            <marker date="1487792957000" expanded="true" signature="2201:2498" ph="{...}" />
+            <marker date="1487792957000" expanded="true" signature="2236:2313" ph="{...}" />
           </folding>
         </state>
       </provider>
