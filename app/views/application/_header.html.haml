@@ -3,7 +3,7 @@
 
     #logo
       = link_to image_tag('logo.png', class: 'logo_image', alt: 'Ringland Swan'), root_path
-      
+
     #header_contact
       .header_contact_item
         %span Tel: 01603 869014
@@ -16,6 +16,7 @@
     #main_menu
       - Page.menu.each do |page|
         = link_to page.menu_name, page
+      = link_to 'Book Now', book_online_path
 
     #menu_toggle
       .menu_bar
