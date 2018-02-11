@@ -54,4 +54,9 @@
         info@ringlandswan.co.uk
 
     %p
-      = link_to 'Download a menu', '/TheRinglandSwanMenu2016.pdf', class: 'book_button'
+      - Page.menu_page.each do |menu|
+        - if menu.display_as_pdf?
+          = link_to menu.name, menu.pdf.try(:url), class: 'book_button'
+        - else
+          = link_to menu.name, menu, class: 'book_button'
+        %br
