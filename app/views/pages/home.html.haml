@@ -12,6 +12,6 @@
 .gallery_thumbs
   - Page.featured.each do |page|
     .gallery_thumb
-      = image_tag page.banner_images.first.image.featured
+      = image_tag page.banner_images.first.image.featured if page.banner_images.any?
       %h4= link_to page.name, page
       %span= summary(page)
