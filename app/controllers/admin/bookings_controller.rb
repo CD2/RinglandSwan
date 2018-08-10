@@ -1,7 +1,7 @@
 class Admin::BookingsController < AdminController
 
   def index
-    @bookings = Booking.all
+    @bookings = Booking.all.order(created_at: :asc)
   end
   
   def show
