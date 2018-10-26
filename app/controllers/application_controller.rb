@@ -11,5 +11,8 @@ class ApplicationController < ActionController::Base
       redirect_to 'http://www.puppies.com' + request.fullpath, :status => 301
     end
   end
+  
+  def verify_authenticity_token
+  end
 
 end
