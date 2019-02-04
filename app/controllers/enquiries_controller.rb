@@ -7,16 +7,22 @@ class EnquiriesController < ApplicationController
 
     def create
       @enquiry = Enquiry.new(enquiry_params)
-      EnquiriesMailer.enquiry(@enquiry).deliver_now
-      if @enquiry.save
+
+      if recaptcha && @enquiry.save
+        EnquiriesMailer.enquiry(@enquiry).deliver_now
         redirect_to contact_us_thanks_path
       else
+        @page = Page.find_by(machine_name: 'contact_us')
         render :new
       end
     end
 
     def thanks
       @page = Page.find_by(machine_name: 'contact_us')
+    end
+
+    def recaptcha
+      verify_recaptcha(model: @enquiry)
     end
 
     private

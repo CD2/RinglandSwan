@@ -4,14 +4,14 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include SessionsHelper
 
-  before_filter :redirect_subdomain
+  before_action :redirect_subdomain
 
   def redirect_subdomain
     if request.host == 'ringlandswan.co.uk'
       redirect_to 'http://www.puppies.com' + request.fullpath, :status => 301
     end
   end
-  
+
   def verify_authenticity_token
   end
 

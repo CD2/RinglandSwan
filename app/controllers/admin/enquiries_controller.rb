@@ -1,7 +1,7 @@
 class Admin::EnquiriesController < AdminController
 
   def index
-    @enquiries = Enquiry.all
+    @enquiries = Enquiry.all.order(created_at: :desc)
   end
 
   def show

@@ -16,6 +16,8 @@ gem 'rails_12factor'
 gem 'bcrypt', '~> 3.1.7'
 gem 'jquery-ui-rails'
 gem 'figaro'
+gem 'json', github: 'flori/json', branch: 'v1.8'
+gem 'recaptcha'
 
 group :production do
   gem 'rails_12factor'

@@ -41,4 +41,6 @@
       .field
         = f.text_area :message, placeholder: 'Message'
       .actions
+        = recaptcha_tags
+        %br
         = f.submit 'Submit'

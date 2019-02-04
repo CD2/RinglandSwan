@@ -32,6 +32,10 @@
         = f.label :time, "Please enter the preferred time of your reservation"
         = f.text_field :time, type: :time
       = f.hidden_field :booking_type
+      %div{style: "float: left; clear: both; width: 100%;"}
+        = recaptcha_tags
+        %br
+
       .actions
         = f.submit 'Submit'
 
