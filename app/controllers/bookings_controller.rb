@@ -35,7 +35,7 @@ class BookingsController < ApplicationController
   end
 
   def recaptcha
-    verify_recaptcha(model: @enquiry)
+    verify_recaptcha(model: @booking)
   end
 
   private
