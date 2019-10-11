@@ -9,7 +9,7 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
 
-    if recaptcha && @booking.save
+    if @booking.save
       EnquiriesMailer.booking(@booking).deliver_now
       if @booking.event?
         @page = Page.find_by(machine_name: 'whats_on_events')
