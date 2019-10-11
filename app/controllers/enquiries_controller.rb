@@ -8,7 +8,7 @@ class EnquiriesController < ApplicationController
     def create
       @enquiry = Enquiry.new(enquiry_params)
 
-      if recaptcha && @enquiry.save
+      if @enquiry.save
         EnquiriesMailer.enquiry(@enquiry).deliver_now
         redirect_to contact_us_thanks_path
       else
