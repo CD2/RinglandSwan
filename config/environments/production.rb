@@ -73,9 +73,8 @@ Rails.application.configure do
       domain: "http://www.ringlandswan.co.uk",
       authentication: :plain,
       enable_starttls_auto: true,
-      user_name: ENV['SENDGRID_USERNAME'],
-      password: ENV['SENDGRID_PASSWORD']
-
+      user_name: "apikey",
+      password: ENV['SENDGRID_KEY']
   }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
